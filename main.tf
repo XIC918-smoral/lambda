@@ -1,6 +1,9 @@
 provider "aws" {
   region = "ap-south-1"
 }
+
+variable "BUILD_NUMBER" {
+ } 
 provider "archive" {}
 data "archive_file" "zip" {
   type        = "zip"
