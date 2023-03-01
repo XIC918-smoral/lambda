@@ -4,7 +4,7 @@ provider "aws" {
 provider "archive" {}
 data "archive_file" "zip" {
   type        = "zip"
-  source_file = "welcome.py"
+  source_dir = "51"
   output_path = "welcome.zip"
 }
 
@@ -60,5 +60,5 @@ resource "aws_lambda_function" "lambda" {
   filename      = "welcome.zip"
   role                           = aws_iam_role.lambda_role.arn
   handler = "welcome.lambda_handler"
-  runtime = "python3.9"
+  runtime = "nodejs18.x"
 }
