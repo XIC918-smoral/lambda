@@ -4,7 +4,7 @@ provider "aws" {
 provider "archive" {}
 data "archive_file" "zip" {
   type        = "zip"
-  source_dir = "51"
+  source_dir = "52"
   output_path = "welcome.zip"
 }
 
